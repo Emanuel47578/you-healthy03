@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
     z-index: 2; /* Garante que a barra fique acima do conteúdo */
     top: 0px; /* Fixa a barra na parte superior da página */
     left: 0px;
-    width: 100%;
+    width: 800px;
 }
 
 .img-treinando {
