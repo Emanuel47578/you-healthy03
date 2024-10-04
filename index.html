@@ -15,6 +15,17 @@
 </head>
 <body>
 
+    <!-- Adicionar os áudios para cada card -->
+    <audio id="somCali">
+        <source src="som.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="somCardio">
+        <source src="som.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="somMusc">
+        <source src="som.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- Pagina 1: menu -->
     <div class="pg-1">
         <a href="menu.html"><img class="logo" src="You Healthy (5) (1).png" alt="Logo"></a>
@@ -36,9 +47,9 @@
 
     <!-- Pagina 2: Treinos -->
     <div class="pg-2">
-        <img class="card-cali" src="CARDIO (2).png" alt="cardio">
-        <img class="card-cardio" src="CARDIO.png" alt="cardio">
-        <img class="card-musc" src="CARDIO (1).png" alt="cardio">
+        <img class="card-cali" src="CARDIO (2).png" alt="Calistenia">
+        <img class="card-cardio" src="CARDIO.png" alt="Cardio">
+        <img class="card-musc" src="CARDIO (1).png" alt="Musculação">
         <p id="marc-pg1" class="marca-pg1">.</p>
     </div>
 
@@ -91,6 +102,29 @@
     </div>
 
     <p id="sla" class="sla">sla</p>
+
+    <script>
+        // Seleciona os elementos dos cards
+        const cardCali = document.querySelector('.card-cali');
+        const cardCardio = document.querySelector('.card-cardio');
+        const cardMusc = document.querySelector('.card-musc');
+
+        // Seleciona os sons
+        const somCali = document.getElementById('somCali');
+        const somCardio = document.getElementById('somCardio');
+        const somMusc = document.getElementById('somMusc');
+
+        // Função para tocar som
+        function tocarSom(som) {
+            som.currentTime = 0; // Reinicia o som
+            som.play(); // Reproduz o som
+        }
+
+        // Adiciona eventos de hover para tocar os sons
+        cardCali.addEventListener('mouseenter', () => tocarSom(somCali));
+        cardCardio.addEventListener('mouseenter', () => tocarSom(somCardio));
+        cardMusc.addEventListener('mouseenter', () => tocarSom(somMusc));
+    </script>
 
     
 </body>
